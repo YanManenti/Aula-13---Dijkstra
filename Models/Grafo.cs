@@ -46,38 +46,47 @@ namespace Aula_13___Dijkstra.Models
             if (vertices.TryGetValue(origem, out Vertice verifiedOrigem) && vertices.TryGetValue(destino, out Vertice verifiedDestino))
             {
                 PriorityQueue<Vertice, int> naoVisitados = new PriorityQueue<Vertice, int>();
-                foreach (KeyValuePair<string, Vertice> current in vertices)
-                {
-                    if (current.Value == verifiedOrigem)
-                    {
-                        current.Value.prioridade = 0;
-                    }
-                    naoVisitados.Enqueue(current.Value, current.Value.prioridade);
-                }
+                // foreach (KeyValuePair<string, Vertice> current in vertices)
+                // {
+                //     if (current.Value == verifiedOrigem)
+                //     {
+                //         current.Value.prioridade = 0;
+                //     }
+                //     naoVisitados.Enqueue(current.Value, current.Value.prioridade);
+                // }
+                vertices[destino].path.Add(vertices[origem]);
+                naoVisitados.Enqueue(verifiedOrigem, 0);
 
-                while (naoVisitados.Count > 0)
+                while (naoVisitados.TryPeek(out Vertice peekedVertice, out int peekedDistance) && peekedDistance != int.MaxValue)
                 {
-                    naoVisitados.TryDequeue(out Vertice currentVertice, out int currentPrio);
-                    currentVertice.visitado = true;
-                    Console.WriteLine($"Visitando {currentVertice.nome} com prioridade {currentPrio}");
-                    foreach (Aresta currentAresta in currentVertice.arestas)
+                    naoVisitados.TryDequeue(out Vertice currentVertice, out int currentDistance);
+                    Console.WriteLine($"Visitando {currentVertice.nome} com distancia {currentDistance}");
+                    // if (vertices[currentVertice.nome].visitado)
+                    // {
+                    //     Console.WriteLine($"Vertice {currentVertice.nome} ja foi visitado!");
+                    //     continue;
+                    // }
+                    vertices[currentVertice.nome].visitado = true;
+                    foreach (Aresta aresta in currentVertice.arestas)
                     {
-                        Vertice currentDestino = currentAresta.destino;
-                        Console.WriteLine($"Verificando aresta de {currentVertice.nome} para {currentDestino.nome}");
-                        if (!currentDestino.visitado)
+                        Vertice currentDestino = aresta.destino;
+                        if (!vertices[currentDestino.nome].visitado)
                         {
-                            // int newPrio = currentPrio + (-1 * currentAresta.peso * (currentPrio - currentVertice.prioridade));
-                            int newPrio = currentPrio + currentAresta.peso;
-                            Console.WriteLine($"Calculando prioridade de {currentDestino.nome} com base em {currentVertice.nome}: {newPrio}");
-                            // if (newPrio < currentVertice.prioridade)
-                            // {
-                            currentDestino.prioridade = newPrio;
-                            currentDestino.nome = currentVertice.nome;
-                            naoVisitados.Enqueue(currentDestino, newPrio);
-                            // }
+                            if (currentDistance + aresta.peso < vertices[currentDestino.nome].prioridade)
+                            {
+                                vertices[currentDestino.nome].prioridade = currentDistance + aresta.peso;
+                                if (vertices[currentDestino.nome].path.Count > 0)
+                                {
+                                    vertices[currentDestino.nome].path.Clear();
+                                    vertices[currentDestino.nome].path.AddRange(vertices[currentVertice.nome].path);
+                                }
+                                vertices[currentDestino.nome].path.Add(vertices[currentVertice.nome]);
+                                naoVisitados.Enqueue(vertices[currentDestino.nome], vertices[currentDestino.nome].prioridade);
+                            }
                         }
                     }
                 }
+
                 Vertice v = verifiedDestino;
                 List<string> caminho = new List<string>();
                 // while (v != null)
@@ -86,12 +95,13 @@ namespace Aula_13___Dijkstra.Models
                 //     v = vertices[v.nome];
                 // }
                 // caminho.Reverse();
-                while (naoVisitados.Count > 0)
-                {
-                    naoVisitados.TryDequeue(out Vertice currentVertice, out int currentPrio);
-                    caminho.Add(currentVertice.nome + ": " + currentPrio);
-                }
-                Console.WriteLine($"Caminho de {origem} para {destino}: {string.Join(" -> ", caminho)}");
+                // while (naoVisitados.Count > 0)
+                // {
+                //     naoVisitados.TryDequeue(out Vertice currentVertice, out int currentPrio);
+                //     caminho.Add(currentVertice.nome + ": " + currentPrio);
+                // }
+                vertices[destino].path.Add(vertices[destino]);
+                Console.WriteLine($"Caminho de {origem} para {destino}: {string.Join(" -> ", vertices[destino].path.Select(v => v.nome))}");
             }
             else
             {

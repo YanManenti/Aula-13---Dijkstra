@@ -12,3 +12,4 @@ C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\ob
 C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\obj\Debug\net8.0\Aula 13 - Dijkstra.pdb
 C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\obj\Debug\net8.0\Aula 13 - Dijkstra.genruntimeconfig.cache
 C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\obj\Debug\net8.0\ref\Aula 13 - Dijkstra.dll
+C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\obj\Debug\net8.0\Aula 13 - Dijkstra.sourcelink.json

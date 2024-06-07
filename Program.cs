@@ -16,4 +16,4 @@ grafo.AdicionaAresta("C", "F", 4);
 grafo.AdicionaAresta("D", "F", 5);
 
 grafo.caminhoMinimoDijkstra("A", "E");
-grafo.caminhoMinimoDijkstra("A", "F");
+// grafo.caminhoMinimoDijkstra("A", "F");

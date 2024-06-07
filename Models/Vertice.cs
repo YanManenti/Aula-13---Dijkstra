@@ -11,6 +11,7 @@ namespace Aula_13___Dijkstra.Models
         public bool visitado;
         public List<Aresta> arestas;
         public string nome;
+        public List<Vertice> path;
 
         public Vertice(string _nome)
         {
@@ -18,6 +19,7 @@ namespace Aula_13___Dijkstra.Models
             visitado = false;
             prioridade = int.MaxValue;
             arestas = [];
+            path = [];
         }
 
         public void AdicionaAresta(Aresta a)
