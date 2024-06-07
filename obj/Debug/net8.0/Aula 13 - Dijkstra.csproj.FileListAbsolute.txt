@@ -1,0 +1,14 @@
+C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\bin\Debug\net8.0\Aula 13 - Dijkstra.exe
+C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\bin\Debug\net8.0\Aula 13 - Dijkstra.deps.json
+C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\bin\Debug\net8.0\Aula 13 - Dijkstra.runtimeconfig.json
+C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\bin\Debug\net8.0\Aula 13 - Dijkstra.dll
+C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\bin\Debug\net8.0\Aula 13 - Dijkstra.pdb
+C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\obj\Debug\net8.0\Aula 13 - Dijkstra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\obj\Debug\net8.0\Aula 13 - Dijkstra.AssemblyInfoInputs.cache
+C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\obj\Debug\net8.0\Aula 13 - Dijkstra.AssemblyInfo.cs
+C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\obj\Debug\net8.0\Aula 13 - Dijkstra.csproj.CoreCompileInputs.cache
+C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\obj\Debug\net8.0\Aula 13 - Dijkstra.dll
+C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\obj\Debug\net8.0\refint\Aula 13 - Dijkstra.dll
+C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\obj\Debug\net8.0\Aula 13 - Dijkstra.pdb
+C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\obj\Debug\net8.0\Aula 13 - Dijkstra.genruntimeconfig.cache
+C:\Users\yamar\OneDrive\Área de Trabalho\Faculdade\Grafos\Aula 13 - Dijkstra\obj\Debug\net8.0\ref\Aula 13 - Dijkstra.dll

@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Aula_13___Dijkstra.Models
+{
+    public class Vertice
+    {
+        public int prioridade;
+        public bool visitado;
+        public List<Aresta> arestas;
+        public string nome;
+
+        public Vertice(string _nome)
+        {
+            nome = _nome;
+            visitado = false;
+            prioridade = int.MaxValue;
+            arestas = [];
+        }
+
+        public void AdicionaAresta(Aresta a)
+        {
+            arestas.Add(a);
+        }
+    }
+}
