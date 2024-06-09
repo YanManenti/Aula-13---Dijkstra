@@ -100,8 +100,7 @@ namespace Aula_13___Dijkstra.Models
                 //     naoVisitados.TryDequeue(out Vertice currentVertice, out int currentPrio);
                 //     caminho.Add(currentVertice.nome + ": " + currentPrio);
                 // }
-                vertices[destino].path.Add(vertices[destino]);
-                Console.WriteLine($"Caminho de {origem} para {destino}: {string.Join(" -> ", vertices[destino].path.Select(v => v.nome))}");
+                Console.WriteLine($"Caminho de {origem} para {destino}: {vertices[origem].nome} -> {string.Join(" -> ", vertices[destino].path.Select(v => v.nome))} -> {vertices[destino].nome} com distancia {vertices[destino].prioridade}!");
             }
             else
             {
